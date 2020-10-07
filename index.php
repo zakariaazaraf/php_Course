@@ -145,7 +145,7 @@
 			"hicham" => "hi",
 			"girl",
 			"radouane",
-			12 => "simo"
+			12 => 12
 		);
 
 			
@@ -162,7 +162,7 @@
 			}
 
 			echo "<h1>the retun is : " . in_array(array("angular1", "nodeJs1", "vueJs1"), $languages) ."</h1>";
-			echo "<br>The type is : " . gettype(in_array("nodeJs1", $languages));
+			echo "<br>The type is : " . gettype(in_array("nodeJs1", $languages[0])) . "<br>";
 
 			
 			if(in_array(12, $searchArray, true)){
@@ -176,11 +176,11 @@
 			
 
 			//==================   array_search() Function   ======================
-
-			echo "<h2>The return value is " . array_search("hicham", $searchArray, true) . "</h2>";
+			echo "<h1>THE array_search() FUNCTION !!!!<h1>";
+			echo "<h2>The return value is " . array_search(12, $searchArray, false) . "</h2>"; // TRUE MEANS === IDENTICAL COMPARISON
 
 			//==================   array_keys($array, searchValue) Function   ======================
-			echo print_r(array_keys($searchArray, "simo", true));
+			echo print_r(array_keys($searchArray, "simo", true)); // RETURN AN INDEXED ARRAY CONTAIN KEYS OF THIS VALUE 
 			
 
 			
