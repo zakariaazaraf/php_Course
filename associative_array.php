@@ -66,7 +66,7 @@
     echo print_r($multiArray);
     echo "</pre>";
 
-    //$removedItem = array_pop($multiArray[1]);
+    $removedItem = array_pop($multiArray[1]);
 
     //PRINTING THE ASSOCITIVE MULTIDIMENTINAL ARRAY
     echo "<h1>PRINT THE ASSOCIATIVE ARRAY WITH FORECH</h1>";
@@ -80,17 +80,17 @@
     echo "<h2>THE ITEM REMOVED : " . $removedItem . "<h2>";
     //print_r($removedItem);
 
-    //TESTING in_array() FUNCTION
-    if(in_array("azaraf", $array)){
-        echo 'THE VALUE EXIST IN THIS ARRAY';
+    //TESTING in_array() FUNCTION,  NOTE: the third para checks the type value 
+    if(in_array("azAraf", $array)){
+        echo 'THE VALUE \'azaraf\' EXIST IN THIS ARRAY';
     }else{
-        echo "THE VALUE DOESN'T EXIST IN THIS ARRAY";
+        echo "THE VALUE 'azaraf' DOESN'T EXIST IN THIS ARRAY";
     }
 
 
     // TESTING THE array_keys() FUNCTION
     echo "<br><h>TESTING THE array_keys() FUNCTION<h1>";
-    print_r(array_keys($multiArray[0], "low"));
+    print_r(array_keys($multiArray[0], "low")); // IT WELL RETUEN AN INDEXED ARRAY OF KEYS THAT HAVE THE VALUE RESEACHED
 
     ?>
 </body>
