@@ -24,7 +24,7 @@
             }
         */
 
-        $resource = fopen("testFopen.txt", "w");
+        $resource = fopen("testFopen.txt", "w"); // Put the Pointer in a place
     ?>
 </body>
 </html>
