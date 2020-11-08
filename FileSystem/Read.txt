@@ -1,1 +1,1 @@
-Data created by PHP function
+Data created by PHP function, THIS DATA WAS ADDED BY 'fwrite' FUNCTION
