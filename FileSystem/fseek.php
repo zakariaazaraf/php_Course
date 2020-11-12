@@ -15,6 +15,8 @@
                 SEEK_CUR => set the postion to the currecnt one,
                 SEEK_END => set the postion to the enf of the file
             }
+
+            fclose(resource) : bool
         */
 
         // TEST THE "fseek" FUNCTION
@@ -34,6 +36,8 @@
         fseek($resource, 0); // RESET THE POSTION TO THE BEGINING
 
         echo "<h3>Content AFTER function's call : '" . fread($resource, filesize($fileName)) . "'</h3>";
+
+        fclose($resource); // CLOSE THE FILE
     ?>
 </body>
 </html>
