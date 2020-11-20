@@ -84,10 +84,39 @@ try{
 ============== Tables rename, alter table  ==================
 
 
-=> RENAME TABLE tableName TO newName; // shows the command that created the table 
+=> RENAME TABLE tableName TO newName; 
 
-=> ALTER TABLE tableName field = value; // drops the table
+=> ALTER TABLE tableName field = value; 
     EX: ALTER TABLE tableName ENGINE = INNODB;
+
+===============================================================
+
+===============================================================
+======================== Alter Table  ========================
+
+
+=> ALTER TABLE tableName ADD filedName type postion[first, last, after *****];
+    EX: ALTER TABLE users ADD firstName varchar(255) AFTER id;
+
+=> ALTER TABLE tableName DROP filedName;
+    EX: ALTER TABLE users DROP username;
+
+=> ALTER TABLE tablName CHANGE oldFieldName NewFieldName type postion; // CHANGE THE FILED {NAME, TYPE, POSTION? ..}
+    EX: ALTER TABLE users CHANGE username username varchar(255) AFTER email;
+
+=> ALTER TABLE tableName MODIFY fieldName changes;
+    EX: ALTER TABLE users MODIFY username char(20);
+        ALTER TABLE users MODIFY username varchar(255) AFTER *****;
+
+Advance Examples:
+
+    => ALTER TABLE users CONVERT TO CHARACTER SET utf8; // CHANGE TABLE CHARSET AND THEIR COLUMNS
+
+    => ALTER TABLE users
+            MODIFY username varchar(200),
+            CHANGE id iduser tinyint(1) FIRST;
+
+    => ALTER TABLE users RENAME newusers;
 
 ===============================================================
 
