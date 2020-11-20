@@ -57,4 +57,27 @@ try{
 
 ===============================================================
 
+===============================================================
+============== Tables create, tableStructure  ==================
+
+=> CREATE TABLE [IF NOT EXISTS] tableName(
+    id int(4),
+    name varchar(255),
+    email varchar(255)
+);
+
+=> DESCRIBE tableName;  // shows the table structure
+
+=> SHOW COLUMNS FROM tableName; // shows the table structure
+
+=> SHOW FILEDS FROM tableName; // shows the table structure
+
+=> SHOW TABLE STATUS; // shows the status of the table
+
+=> SHOW CREATE TABLE tableName; // shows the command that created the table 
+
+=> DROP TABLE IF EXISTS tableName; // drops the table
+
+===============================================================
+
 
