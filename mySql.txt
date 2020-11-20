@@ -1,0 +1,43 @@
+/**************************************************************
+****************** How To Connect To Database *****************
+***************************************************************/
+
+$dsn = "mysql:host=localhost;dbname=DatabaseName;charset=utf8";
+
+$host = "root";
+
+$pass = "";
+
+$options = array( // YOU CAN PASS OPTIONS TO CONNEXION
+    PDO::MYSQL_ATTR_INIT_COMAND => 'SET NAMES uft8'
+);
+
+try{
+
+    // TRY TO CONNECT TO DATABASE
+    $db = new PDO($dsn, $host, $pass); // PDO Extension    
+
+
+    // HOW TO SET PDO ATTRIBUTES
+    $db->setAttriute(property, value); // see manual 
+
+
+    echo "Your Connection To Database Have been successfully";
+
+}catch(PDOException $e){
+
+    echo "Failed To Connect To Database " + $e->getMessage();
+
+}
+
+
+/**************************************************************
+************** Deal With Databases Using Command **************
+***************************************************************/
+
+===============================================================
+================= Access to mysql command =====================
+=> mysql -u root
+===============================================================
+
+

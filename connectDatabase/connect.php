@@ -3,24 +3,24 @@
     // CONNECT TO DATABASE USING "PDO" EXTENSION
 
 
-    $databaseSourceName = 'mysql:host=localhost;dbname=ziko_database_test';
-    $dbn = 'mysql:host=localhost;dbname=ziko_database_test';
+    $databaseSourceName = 'mysql:host=localhost;dbname=zakaria';
+    $dsn = 'mysql:host=localhost;dbname=zakaria';
 
     $user = 'root';
 
     $password = '';
     $pass = '';
 
-   /*  $options = array(
-        PDO::MYSQL_ATRR_INIT_COMMAND => 'SET NAMES utf8', // SET THE CHARSET
-    ); */
+    $options = array (
+        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
+    );
 
     // START TESTING THE CONNECTION
     echo "<h1>Test The Connection To Databases With mysql Using PDO extension</h1>";
 
     try{
 
-        $db = new PDO($dbn, $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+        $db = new PDO($dsn, $user, $pass, $options);
 
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -28,8 +28,9 @@
 
 
         // INSERT A QUERY TO DATABASE
-        $q = "insert into products values (NULL, 'WAC')";
-
+        $q = "insert into products values (NULL, 'منتح من المنتجات')";
+        //$q = "delete from products";
+        
         // EXECUTE THE QUERY
         $db->exec($q);
 
@@ -38,7 +39,7 @@
 
             echo $row[0] . " " . $row[1] . "<br>";
 
-            /* echo $row['id'] . " " . $row['productName'] . "<br>"; */
+            //echo $row['id'] . " " . $row['productName'] . "<br>"; 
 
         }
 
