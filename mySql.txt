@@ -37,7 +37,24 @@ try{
 
 ===============================================================
 ================= Access to mysql command =====================
+
 => mysql -u root
+
+===============================================================
+
+===============================================================
+============== Database create drop use show ==================
+
+=> CREATE DATABASE IF NOT EXISTS zakaria;
+
+=> USE DatabaseName
+
+=> SHOW DATABASES;
+
+=> SHOW DATABASES LIKE 'DatabaseName';
+
+=> DROP DATABASE IF EXISTS 'databaseName';
+
 ===============================================================
 
 
