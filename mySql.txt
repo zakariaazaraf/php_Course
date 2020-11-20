@@ -80,4 +80,15 @@ try{
 
 ===============================================================
 
+===============================================================
+============== Tables rename, alter table  ==================
+
+
+=> RENAME TABLE tableName TO newName; // shows the command that created the table 
+
+=> ALTER TABLE tableName field = value; // drops the table
+    EX: ALTER TABLE tableName ENGINE = INNODB;
+
+===============================================================
+
 
